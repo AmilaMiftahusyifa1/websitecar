@@ -1,0 +1,159 @@
+<! DOCTYPE html>
+	<html>
+<head>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: Arial;
+			padding: 10px;
+			background: #f1f1f1;
+		}
+
+		/* Header/Blog Title */
+		.header {
+			padding: 30px;
+			text-align: center;
+			background-color: gray;
+		}
+
+		.header h1 {
+			font-size: 50px;
+		}
+
+		/* Style the top navigation bar */
+		.topnav {
+			overflow: hidden;
+			background-color: #333;
+		}
+		/* Style the tovnav links*/
+		.topnav a {
+			float: left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		/*change color on hover */
+		.topnav a:hover {
+			background-color: #ddd;
+			color : black;
+		}
+
+		/* create two unequal columnsthat that floats next to each other */
+		/* left column */
+		.leftcolum {
+			float: left;
+			width: 75%;
+		}
+		/* Right colum */
+		.rightcolumn {
+			float: left;
+			width: 25%;
+			background-color: #f1f1f1;
+			padding-left: 20px;
+		}
+		
+		/* Fake image */
+		.fakeimg {
+			background-color: #aaa;
+			width: 100%;
+			padding: 20px;
+		}
+		/* add a card effect for articles */
+		.card{
+			background-color: white;
+			padding: 20px;
+			margin-top: 20px;
+		}
+		/* Clear float after the columns */
+		.row::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		/* Footer */
+		.footer{
+			padding: 20px;
+			text-align: center;
+			background: #ddd;
+			margin-top: 20px;
+
+		}
+		/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on topof each other instead of next to each other */
+		@media screen and (max-widht: 800px) {
+			.leftcolumn, .rightcolumn {
+				widht: 100%;
+				padding: 0;
+			}
+		}
+		/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+		@media screen and (max-widht: 400px){
+			.topnav a {
+				float: none;
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>My Website</h1>
+		<p>Resize the browser window to see the effect.</p>
+	</div>
+
+	<div class="topnav">
+		<a href="#">Link</a>
+		<a href="#">Link</a>
+		<a href="#">Link</a>
+		<a href="#" style="float:right">Link</a>
+	</div>
+
+	<div class="row">
+		<div class="leftcolum">
+			<div class="card">
+				<h2>Koleksi Mobil Favorit ke-1</h2>
+				<h5>Title description, des 7, 2017</h5>
+					<img src="mobil1.jpg"height="500px"width="100%">
+				<p>About This Image.</p>
+				<p> This Car is my first collection, i bought this with the money i earned from working as an employee in a famous office, i bought this because this was my dream car at that time</p>
+			</div>
+			<div class="card">
+				<h2>Koleksi Mobil Favorit ke-2</h2>
+				<h5>Title description, sep 2, 2017</h5>
+			<img src="mobil2.jpg"height="500px"width="100%">
+				<p>About This Image.</p>
+				<p>Ini adalah koleksi mobil ke-2 saya setelah saya mengkoleksi mobil yang pertama, ini merupakan mobil favorit saya sekarang!</p>
+			</div>
+		</div>
+		<div class="rightcolumn">
+			<div class="card">
+				<h2>About Me</h2>
+				<img src="aboutme.png"height="500px"width="100%">
+				<p>Hallo!
+				   Perkenalkan nama saya Amila Miftahusyifa, Saya merupakan seorang yang suka mengkoleksi mobil. Mobil yang saya koleksi mempunyai bergaimacam, ada mobil keluaran terbaru maupun mobil yang klasik. Saya berumur 20 tahun, alamat saya sekarang di Prancis, tetapi saya aslinya berasal dari Jakarta, Indonesia</p>
+				</div>
+			</div>
+			<div class="rightcolumn">
+			<div class="card">
+				<h3>Sebagian Koleksi Mobil Saya Yang Lainnya!</h3>
+				<div class="fakeimg"><img src="mobilbaru.jpg"height="150px"width="100%"></div>
+				<div class="fakeimg"><img src="mobil3.jpg"height="150px"width="100%"></div>
+				<div class="fakeimg"><img src="mobill.jpg"height="150px"width="100%"></div>
+			</div>
+			</div>
+			<div class="card">
+				<h3>Follow Me</h3>
+				<p>Untuk melihat lagi koleksi mobil saya, ikuti website saya!</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<h2>coppyright &coppy; 2024 Amila Miftahusyifa, all right reserved.</h2>
+	</div>
+</body>
+</html>
